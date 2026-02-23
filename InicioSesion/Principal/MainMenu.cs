@@ -49,6 +49,7 @@ namespace InicioSesion
                         Console.Clear();
                         Estetica.TextoParpadeante("____    _    _     ___ _____ _   _ ____   ___  \r\n/ ___|  / \\  | |   |_ _| ____| \\ | |  _ \\ / _ \\ \r\n\\___ \\ / _ \\ | |    | ||  _| |  \\| | | | | | | |\r\n ___) / ___ \\| |___ | || |___| |\\  | |_| | |_| |\r\n|____/_/   \\_\\_____|___|_____|_| \\_|____/ \\___/ ...\n(presiona cualquier tecla para salir)");
                         return;
+                      
                     default:
                         Lamb.error("Escribe una opción válida => 1/2/3");
                         Lamb.clean();

@@ -17,7 +17,7 @@ namespace InicioSesion
                 Estetica.TextoParpadeante("██████╗ ██╗██╗  ██╗███████╗██╗     ██████╗ ██╗   ██╗███████╗██╗  ██╗\r\n██╔══██╗██║╚██╗██╔╝██╔════╝██║     ██╔══██╗██║   ██║██╔════╝██║  ██║\r\n██████╔╝██║ ╚███╔╝ █████╗  ██║     ██████╔╝██║   ██║███████╗███████║\r\n██╔═══╝ ██║ ██╔██╗ ██╔══╝  ██║     ██╔══██╗██║   ██║╚════██║██╔══██║\r\n██║     ██║██╔╝ ██╗███████╗███████╗██║  ██║╚██████╔╝███████║██║  ██║\r\n╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝\n____ ___  __  __ ___ _____ _   _ _____  _    \r\n / ___/ _ \\|  \\/  |_ _| ____| \\ | |__  / / \\   \r\n| |  | | | | |\\/| || ||  _| |  \\| | / / / _ \\  \r\n| |__| |_| | |  | || || |___| |\\  |/ /_/ ___ \\ \r\n \\____\\___/|_|  |_|___|_____|_| \\_/____/_/   \\_\\          _        _    \r\n| |      / \\   \r\n| |     / _ \\  \r\n| |___ / ___ \\ \r\n|_____/_/   \\_\\ \n _ __     _______ _   _ _____ _   _ ____      _    \r\n   / \\\\ \\   / / ____| \\ | |_   _| | | |  _ \\    / \\   \r\n  / _ \\\\ \\ / /|  _| |  \\| | | | | | | | |_) |  / _ \\  \r\n / ___ \\\\ V / | |___| |\\  | | | | |_| |  _ <  / ___ \\ \r\n/_/   \\_\\\\_/  |_____|_| \\_| |_|  \\___/|_| \\_\\/_/   \\_\\ \n(presiona cualquier tecla para empezar)");
                 while (true)
                 {
-                    LetrasLento.Letras(12,"¿Que deseas hacer? \n1 - Jugar\n2 - Calculadora\n3 - Sobre la cuenta\n4 - Cerrar Sesión");
+                    LetrasLento.Letras(12,"¿Que deseas hacer? \n1 - Juegos\n2 - Calculadora\n3 - Conversor datos\n4 - Contador frases\n5 - Temporizador\n6 - Sobre la cuenta\n7 - Cerrar Sesión");
                     ConsoleKeyInfo queHacer = Console.ReadKey(true);
                     switch (queHacer.Key)
                     {
@@ -29,13 +29,22 @@ namespace InicioSesion
                         Program.calc.Calculator();
                         break;
                         case ConsoleKey.D3:
+                        ConversorUnidades.Conversor();
+                        break;
+                    case ConsoleKey.D4:
+                        ContadorPalabras.ContadorLetras();
+                        break;
+                    case ConsoleKey.D5:
+                        Timer.Temporizador();
+                        break;
+                        case ConsoleKey.D6:
                         Console.Clear();
                         Console.WriteLine("Cuenta actual: ");
                         LetrasLento.Letras(15,$"Nombre => {LogIn.actualUserName}\nMail => {LogIn.actualUserMail}\nContraseña => {LogIn.encriptedPassword}\nID => {LogIn.actualUserId}"); 
                         Console.WriteLine("Presiona cualquier tecla para continuar");
                         Lamb.clean();
                             break;
-                    case ConsoleKey.D4:
+                    case ConsoleKey.D7:
                         LetrasLento.Letras(20,"¿Estás seguro que quieres cerrar sesión? s/n");
                         string queHacer2 = Console.ReadLine().ToLower();
                         switch (queHacer2) 

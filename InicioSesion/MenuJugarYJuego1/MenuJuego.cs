@@ -11,7 +11,7 @@ namespace InicioSesion
             Console.Clear();
             while (true)
             {
-                LetrasLento.Letras(12, "¿Que deseas hacer?\n1 - ADIVNATOR\n2 - Juego 2 \n3 - Juego 3\n4 - Estadísticas\n5 - Volver");
+                LetrasLento.Letras(12, "¿Que deseas hacer?\n1 - ADIVNATOR\n2 - Piedra/Papel/Tijera \n3 - Juego 3\n4 - Estadísticas\n5 - Volver");
             ConsoleKeyInfo queHacer = Console.ReadKey(true);
                 switch (queHacer.Key)
                 {
@@ -19,6 +19,7 @@ namespace InicioSesion
                         Program.j1.Juego1();
                         break;
                     case ConsoleKey.D2:
+                        Program.j2.Juego2();
                         break;
                     case ConsoleKey.D3:
                         break;

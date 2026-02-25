@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InicioSesion;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,9 +7,9 @@ namespace InicioSesion
 {
    class ConversorUnidades
     {
-        static double datoAñadido;
-        static double result;
-        public static void Conversor()
+        double datoAñadido;
+        double result;
+        public void Conversor()
         {
             Estetica.TextoParpadeante("____   ___   _   _ __     __ _____ ____   ____   ___   ____  \r\n / ___| / _ \\ | \\ | |\\ \\   / /| ____||  _ \\ / ___| / _ \\ |  _ \\ \r\n| |    | | | ||  \\| | \\ \\ / / |  _|  | |_) |\\___ \\| | | || |_) |\r\n| |___ | |_| || |\\  |  \\ V /  | |___ |  _ <  ___) | |_| ||  _ < \r\n \\____| \\___/ |_| \\_|   \\_/   |_____||_| \\_\\|____/ \\___/ |_| \\_\\ \n _   _  _   _  ___  ____    _    ____   _____  ____  \r\n| | | || \\ | ||_ _||  _ \\  / \\  |  _ \\ | ____|/ ___| \r\n| | | ||  \\| | | | | | | |/ _ \\ | | | ||  _|  \\___ \\ \r\n| |_| || |\\  | | | | |_| / ___ \\| |_| || |___  ___) |\r\n \\___/ |_| \\_||___||____/_/   \\_\\____/ |_____||____/");
             while (true)
@@ -53,7 +54,7 @@ namespace InicioSesion
                 }
             }
         }
-       static void LeeDato()
+      void LeeDato()
         {
             bool tryParse;
             do
@@ -63,7 +64,7 @@ namespace InicioSesion
                 tryParse = double.TryParse(Console.ReadLine(), out datoAñadido);
             } while (!tryParse);
         }
-        static void Monedas()
+        void Monedas()
         {
             while (true)
             {
@@ -98,37 +99,37 @@ namespace InicioSesion
                 }
             }
         }
-       static double CelsiusFar(double dato)
+      double CelsiusFar(double dato)
         {
             double resultado = (dato * 9) / 5 + 32;
             return resultado;
         }
-       static double FarCelsius(double dato)
+        double FarCelsius(double dato)
         {
             double resultado = ((dato-32)*5)/9;
             return resultado;
         }
-       static double KmMillas(double dato)
+       double KmMillas(double dato)
         {
             double resultado = dato * 0.621371;
             return resultado;
         }
-       static double MillasKm(double dato)
+        double MillasKm(double dato)
         {
             double resultado = dato / 0.621371;
             return resultado;
         }
-      static  double EuroAdolar(double dato)
+        double EuroAdolar(double dato)
         {
             double resultado = dato * 1.179;
             return resultado;
         }
-       static double EuroAGBP(double dato)
+        double EuroAGBP(double dato)
         {
             double resultado = dato * 0.87;
             return resultado;
         }
-        static double EuroAFrancoSuizo(double dato)
+         double EuroAFrancoSuizo(double dato)
         {
             double resultado = dato * 0.91;
             return resultado;

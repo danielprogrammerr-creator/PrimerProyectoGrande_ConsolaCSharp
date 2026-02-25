@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
@@ -31,6 +32,7 @@ namespace InicioSesion
         {
             while (true)
             {
+                Console.Clear();
                 
                 LetrasLento.Letras(12,"¿Que deseas hacer?\n1 - Registrarse\n2 - Iniciar Sesión\n3 - Salir");
                 ConsoleKeyInfo queHacer = Console.ReadKey(true);
@@ -49,7 +51,7 @@ namespace InicioSesion
                         Console.Clear();
                         Estetica.TextoParpadeante("____    _    _     ___ _____ _   _ ____   ___  \r\n/ ___|  / \\  | |   |_ _| ____| \\ | |  _ \\ / _ \\ \r\n\\___ \\ / _ \\ | |    | ||  _| |  \\| | | | | | | |\r\n ___) / ___ \\| |___ | || |___| |\\  | |_| | |_| |\r\n|____/_/   \\_\\_____|___|_____|_| \\_|____/ \\___/ ...\n(presiona cualquier tecla para salir)");
                         return;
-                      
+
                     default:
                         Lamb.error("Escribe una opción válida => 1/2/3");
                         Lamb.clean();

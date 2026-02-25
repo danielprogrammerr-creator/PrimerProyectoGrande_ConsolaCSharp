@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InicioSesion;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +7,7 @@ namespace InicioSesion
 {
     class Timer
     {
-        public static void Temporizador()
+        public void Temporizador()
         {
             Estetica.TextoParpadeante("_____  _____  __  __  ____    ___   ____   ___  _____   _    ____    ___   ____  \r\n|_   _|| ____||  \\/  ||  _ \\  / _ \\ |  _ \\ |_ _| |__  /  / \\  |  _ \\  / _ \\ |  _ \\ \r\n  | |  |  _|  | |\\/| || |_) || | | || |_) | | |    / /  / _ \\ | | | || | | || |_) |\r\n  | |  | |___ | |  | ||  __/ | |_| ||  _ <  | |   / /_ / ___ \\| |_| || |_| ||  _ < \r\n  |_|  |_____||_|  |_||_|     \\___/ |_| \\_\\|___| /____/_/   \\_\\____/  \\___/ |_| \\_\\");
             while (true)
@@ -27,7 +28,7 @@ namespace InicioSesion
                 }
             }
         }
-        static void Tiempo()
+        void Tiempo()
         {
             bool tryParse;
             int val;

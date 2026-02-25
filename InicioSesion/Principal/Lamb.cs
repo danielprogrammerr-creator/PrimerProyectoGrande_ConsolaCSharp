@@ -23,6 +23,17 @@ namespace InicioSesion
             Console.ReadKey();
             Console.Clear();
         };
+        public static Func<int,bool> par = num =>
+        {
+            if (num%2 ==0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        };
 
     }
 }

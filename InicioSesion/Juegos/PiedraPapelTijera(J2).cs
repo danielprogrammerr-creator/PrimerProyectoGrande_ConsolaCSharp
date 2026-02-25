@@ -1,8 +1,9 @@
-﻿using System;
+﻿using InicioSesion;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace InicioSesion.Juego2_PiedraPapelTijera_
+namespace InicioSesion
 {
     class JuegoDos
     {

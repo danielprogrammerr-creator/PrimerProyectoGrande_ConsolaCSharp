@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InicioSesion;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -22,10 +23,12 @@ namespace InicioSesion
                         Program.j2.Juego2();
                         break;
                     case ConsoleKey.D3:
+                        Console.WriteLine("Juego en desarrollo...");
+                        Lamb.clean();
                         break;
                     case ConsoleKey.D4:
                         Estetica.TextoParpadeante("_____ ____ _____  _    ____ ___ ____ _____ ___ ____    _    ____  \r\n| ____/ ___|_   _|/ \\  |  _ \\_ _/ ___|_   _|_ _/ ___|  / \\  / ___| \r\n|  _| \\___ \\ | | / _ \\ | | | | |\\___ \\ | |  | | |     / _ \\ \\___ \\ \r\n| |___ ___) || |/ ___ \\| |_| | | ___) || |  | | |___ / ___ \\ ___) |\r\n|_____|____/ |_/_/   \\_\\____/___|____/ |_| |___\\____/_/   \\_\\____/\n(presiona cualquier tecla para continuar)");
-                        Estadisticas.Stats();
+                        Program.stats.Stats();
                         break;
                     case ConsoleKey.D5:
                         Console.Clear();

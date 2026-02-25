@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InicioSesion;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +7,7 @@ namespace InicioSesion
 {
     class ContadorPalabras
     {
-        public static void ContadorLetras()
+        public void ContadorLetras()
         {
             Estetica.TextoParpadeante("____   ___   _   _  _____   _    ____    ___   ____  \r\n / ___| / _ \\ | \\ | ||_   _| / \\  |  _ \\  / _ \\ |  _ \\ \r\n| |    | | | ||  \\| |  | |  / _ \\ | | | || | | || |_) |\r\n| |___ | |_| || |\\  |  | | / ___ \\| |_| || |_| ||  _ < \r\n \\____| \\___/ |_| \\_|  |_|/_/   \\_\\____/  \\___/ |_| \\_\\");
             while (true) {
@@ -27,7 +28,7 @@ namespace InicioSesion
                 }
             }
         }
-        static void Contar()
+        void Contar()
         {
             LetrasLento.Letras(20,"Escribe tu frase: ");
             string? frase = Console.ReadLine();

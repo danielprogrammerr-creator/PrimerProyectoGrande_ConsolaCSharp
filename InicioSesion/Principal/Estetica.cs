@@ -58,6 +58,29 @@ namespace InicioSesion
                     break;
             }
         }
+
+        public static void Parpadeo(string texto)
+        {
+            bool a = true;
+            while (a)
+            {
+                Console.WriteLine(texto);
+                Thread.Sleep(500);
+                if (Console.KeyAvailable)
+                {
+                    Console.Clear();
+                    break;
+                }
+                Console.Clear();
+                Thread.Sleep(500);
+                if (Console.KeyAvailable)
+                {
+                    Console.Clear();
+                    break;
+                }
+
+            }
+        }
     }
 }
 

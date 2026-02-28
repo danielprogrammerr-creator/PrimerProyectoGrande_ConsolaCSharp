@@ -84,7 +84,6 @@ namespace InicioSesion
             Console.Clear();
             LetrasLento.Letras(20,"Has perdido!");
             Lamb.error("(presiona cualquier tecla para salir)");
-            LogIn.actualUserPoints += 5;
             Lamb.clean();
         }
         void Empate()
@@ -92,7 +91,6 @@ namespace InicioSesion
             Console.Clear();
             LetrasLento.Letras(20, "Empate!!");
             Lamb.error("(presiona cualquier tecla para salir)");
-            LogIn.actualUserPoints += 5;
             Lamb.clean();
         }
         void Decision()

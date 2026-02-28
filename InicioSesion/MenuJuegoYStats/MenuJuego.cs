@@ -12,7 +12,7 @@ namespace InicioSesion
             Console.Clear();
             while (true)
             {
-                LetrasLento.Letras(12, "¿Que deseas hacer?\n1 - ADIVNATOR\n2 - Piedra/Papel/Tijera \n3 - Juego 3\n4 - Estadísticas\n5 - Volver");
+                Estetica.Parpadeo( "¿Que deseas hacer?\n1 - ADIVNATOR\n2 - Piedra/Papel/Tijera \n3 - Oleadas(juego complejo)\n4 - Estadísticas\n5 - Volver");
             ConsoleKeyInfo queHacer = Console.ReadKey(true);
                 switch (queHacer.Key)
                 {
@@ -23,8 +23,7 @@ namespace InicioSesion
                         Program.j2.Juego2();
                         break;
                     case ConsoleKey.D3:
-                        Console.WriteLine("Juego en desarrollo...");
-                        Lamb.clean();
+                        Program.j3.Juego();
                         break;
                     case ConsoleKey.D4:
                         Estetica.TextoParpadeante("_____ ____ _____  _    ____ ___ ____ _____ ___ ____    _    ____  \r\n| ____/ ___|_   _|/ \\  |  _ \\_ _/ ___|_   _|_ _/ ___|  / \\  / ___| \r\n|  _| \\___ \\ | | / _ \\ | | | | |\\___ \\ | |  | | |     / _ \\ \\___ \\ \r\n| |___ ___) || |/ ___ \\| |_| | | ___) || |  | | |___ / ___ \\ ___) |\r\n|_____|____/ |_/_/   \\_\\____/___|____/ |_| |___\\____/_/   \\_\\____/\n(presiona cualquier tecla para continuar)");

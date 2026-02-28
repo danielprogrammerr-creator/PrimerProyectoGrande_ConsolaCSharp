@@ -8,8 +8,15 @@ namespace InicioSesion
     {
         public static void Letras(int velocidad, string texto)
         {
-            for(int i = 0; i < texto.Length; i++) 
+            string texto2;
+            for (int i = 0; i < texto.Length; i++) 
             {
+                if(Console.KeyAvailable)
+                {
+                    Console.ReadKey(true);
+                    Console.Write(texto.Substring(i));
+                    break;
+                }
                 Console.Write(texto[i]);
                 Thread.Sleep(velocidad);
             }

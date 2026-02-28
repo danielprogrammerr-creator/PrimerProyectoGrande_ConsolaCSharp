@@ -18,7 +18,7 @@ namespace InicioSesion
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine($"Bienvenido, tienes {monedas} monedas(se perderán al cerrar sesión), ¿que deseas hacer?\n1 - Tirar Ruleta\n2 - Volver");
+                Estetica.Parpadeo($"Bienvenido, tienes {monedas}, ¿que deseas hacer?\n1 - Tirar Ruleta\n2 - Volver");
                 ConsoleKeyInfo queHacer = Console.ReadKey(true);
                 switch (queHacer.Key)
                 {
@@ -112,7 +112,7 @@ namespace InicioSesion
             bool prueba;
             do
             {
-                Console.WriteLine("¿Que número deseas elegir? (rojos x2, negros x2, verde x16//acertar número x4 (rojos y negros))");
+                LetrasLento.Letras(15,"¿Que número deseas elegir? (rojos x2, negros x2, verde x16//acertar número x4 (rojos y negros))");
                 string a = Console.ReadLine();  
                 prueba = int.TryParse(a, out decision);
                 Console.SetCursorPosition(0, 0);
@@ -120,14 +120,14 @@ namespace InicioSesion
             } while (!prueba || decision < 0 || decision > 36);
             do
             {
-                Console.WriteLine($"Número {decision} seleccionado...\n¿Cuantas monedas deseas apostar(tienes: {monedas} monedas)?");
+                LetrasLento.Letras(15,$"Número {decision} seleccionado...\n¿Cuantas monedas deseas apostar(tienes: {monedas} monedas)?");
                 string a = Console.ReadLine();
                 prueba = int.TryParse(a, out invertirMonedas);
                 Console.Clear();
             } while (!prueba || invertirMonedas < 0 || invertirMonedas>monedas);
             Console.Clear();
             monedas -= invertirMonedas;
-            Console.WriteLine($"{invertirMonedas} monedas apostadas, te quedan {monedas} monedas.\nPresiona cualquier tecla para tirar la ruleta... ¡Suerte!");
+            LetrasLento.Letras(15,$"{invertirMonedas} monedas apostadas, te quedan {monedas} monedas.\nPresiona cualquier tecla para tirar la ruleta... ¡Suerte!");
             Lamb.clean();
         }
         void DarPremios()
@@ -136,23 +136,23 @@ namespace InicioSesion
             {
                 invertirMonedas *= 16;
                 monedas += invertirMonedas;
-                Console.WriteLine($"Enhorabuena, has ganado {invertirMonedas} monedas, tienes {monedas} monedas.");
+                Lamb.good($"Enhorabuena, has ganado {invertirMonedas} monedas, tienes {monedas} monedas.");
             }
             if(decision != 0 &&decision == resultado)
             {
                 invertirMonedas *= 4;
                 monedas += invertirMonedas;
-                Console.WriteLine($"Enhorabuena, has ganado {invertirMonedas} monedas, tienes {monedas} monedas.");
+                Lamb.good($"Enhorabuena, has ganado {invertirMonedas} monedas, tienes {monedas} monedas.");
             }
             else if (Lamb.par(decision) && !Lamb.par(resultado) || !Lamb.par(decision) && Lamb.par(resultado))
             {
-                Console.WriteLine("Lo siento, has perdido, suerte para la próxima.");
+                Lamb.error("Lo siento, has perdido, suerte para la próxima.");
             }
             else if (Lamb.par(decision) && Lamb.par(resultado) || !Lamb.par(decision) && !Lamb.par(resultado))
             {
                 invertirMonedas *= 2;
                 monedas += invertirMonedas;
-                Console.WriteLine($"Enhorabuena, has ganado {invertirMonedas} monedas, tienes {monedas} monedas.");
+                Lamb.good($"Enhorabuena, has ganado {invertirMonedas} monedas, tienes {monedas} monedas.");
             }
         }
 

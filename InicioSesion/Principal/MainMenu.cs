@@ -30,11 +30,10 @@ namespace InicioSesion
         }
         void ForMenu()
         {
+            Console.Clear();
             while (true)
             {
-                Console.Clear();
-                
-                LetrasLento.Letras(12,"¿Que deseas hacer?\n1 - Registrarse\n2 - Iniciar Sesión\n3 - Salir");
+                Estetica.Parpadeo("¿Que deseas hacer?\n1 - Registrarse\n2 - Iniciar Sesión\n3 - Salir");
                 ConsoleKeyInfo queHacer = Console.ReadKey(true);
                 switch (queHacer.Key)
                 {
@@ -53,9 +52,8 @@ namespace InicioSesion
                         return;
 
                     default:
-                        Lamb.error("Escribe una opción válida => 1/2/3");
-                        Lamb.clean();
-                        continue;
+
+                       continue;
                 }
             }
         }

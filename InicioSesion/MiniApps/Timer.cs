@@ -13,7 +13,7 @@ namespace InicioSesion
             while (true)
             {
                 Console.Clear();
-                LetrasLento.Letras(12,"¿Que deseas hacer?\n1 - Añadir Temporizador\n2 - Volver");
+                Estetica.Parpadeo("¿Que deseas hacer?\n1 - Añadir Temporizador\n2 - Volver");
                 ConsoleKeyInfo queHacer = Console.ReadKey(true);
                 switch (queHacer.Key)
                 {

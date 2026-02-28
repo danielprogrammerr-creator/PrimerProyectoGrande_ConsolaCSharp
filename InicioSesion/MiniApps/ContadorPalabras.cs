@@ -12,7 +12,7 @@ namespace InicioSesion
             Estetica.TextoParpadeante("____   ___   _   _  _____   _    ____    ___   ____  \r\n / ___| / _ \\ | \\ | ||_   _| / \\  |  _ \\  / _ \\ |  _ \\ \r\n| |    | | | ||  \\| |  | |  / _ \\ | | | || | | || |_) |\r\n| |___ | |_| || |\\  |  | | / ___ \\| |_| || |_| ||  _ < \r\n \\____| \\___/ |_| \\_|  |_|/_/   \\_\\____/  \\___/ |_| \\_\\");
             while (true) {
                 Console.Clear();
-                LetrasLento.Letras(12,"¿Que deseas hacer?\n1 - Contar\n2 - Volver");
+                Estetica.Parpadeo("¿Que deseas hacer?\n1 - Contar\n2 - Volver");
                 ConsoleKeyInfo queHacer = Console.ReadKey(true);
                 switch (queHacer.Key)
                 {

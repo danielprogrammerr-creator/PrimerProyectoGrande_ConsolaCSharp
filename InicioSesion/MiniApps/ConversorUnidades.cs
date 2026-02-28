@@ -14,8 +14,7 @@ namespace InicioSesion
             Estetica.TextoParpadeante("____   ___   _   _ __     __ _____ ____   ____   ___   ____  \r\n / ___| / _ \\ | \\ | |\\ \\   / /| ____||  _ \\ / ___| / _ \\ |  _ \\ \r\n| |    | | | ||  \\| | \\ \\ / / |  _|  | |_) |\\___ \\| | | || |_) |\r\n| |___ | |_| || |\\  |  \\ V /  | |___ |  _ <  ___) | |_| ||  _ < \r\n \\____| \\___/ |_| \\_|   \\_/   |_____||_| \\_\\|____/ \\___/ |_| \\_\\ \n _   _  _   _  ___  ____    _    ____   _____  ____  \r\n| | | || \\ | ||_ _||  _ \\  / \\  |  _ \\ | ____|/ ___| \r\n| | | ||  \\| | | | | | | |/ _ \\ | | | ||  _|  \\___ \\ \r\n| |_| || |\\  | | | | |_| / ___ \\| |_| || |___  ___) |\r\n \\___/ |_| \\_||___||____/_/   \\_\\____/ |_____||____/");
             while (true)
             {
-                Console.Clear();
-                LetrasLento.Letras(12,"¿Que quieres hacer?\n1 - Grados Celsius a Fahrenheit.\n2 - Grados Fahrenheit a Celsius\n3 - Km a Millas\n4 - Millas a Km\n5 - Monedas(€ a otras)\n6 - Volver");
+                Estetica.Parpadeo("¿Que quieres hacer?\n1 - Grados Celsius a Fahrenheit.\n2 - Grados Fahrenheit a Celsius\n3 - Km a Millas\n4 - Millas a Km\n5 - Monedas(€ a otras)\n6 - Volver");
                 ConsoleKeyInfo queHacer = Console.ReadKey(true);
                 switch (queHacer.Key)
                 {
@@ -69,7 +68,7 @@ namespace InicioSesion
             while (true)
             {
                 Console.Clear();
-                LetrasLento.Letras(12,"¿Que moneda eliges?\n1 - Euro a Dolar\n2 - Euro a GBP(libras)\n3 - Euro a CHF(francos suizos)\n4 - Volver");
+                Estetica.Parpadeo("¿Que moneda eliges?\n1 - Euro a Dolar\n2 - Euro a GBP(libras)\n3 - Euro a CHF(francos suizos)\n4 - Volver");
                 ConsoleKeyInfo queHacer = Console.ReadKey(true);
                 switch (queHacer.Key)
                 {

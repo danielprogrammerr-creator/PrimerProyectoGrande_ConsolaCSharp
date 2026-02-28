@@ -1,10 +1,11 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 namespace InicioSesion
 {
     class Program
     {
+        public static Contenido j3 = new Contenido();
+        public static AttackSimulator attack = new AttackSimulator();
         public static Estadisticas stats = new Estadisticas();
         public static ContadorPalabras contPalabras = new ContadorPalabras();
         public static ConversorUnidades convUnids = new ConversorUnidades();

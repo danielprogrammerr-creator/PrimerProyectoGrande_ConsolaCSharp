@@ -13,6 +13,7 @@ namespace InicioSesion
         public static string? actualUserPassword = null;
         public static int? actualUserId = null;
         public static int actualUserPoints = 0;
+        public static int actualNivelJ3 = 0;
         public static bool hayUsuariosCreados = false;
         public static bool sesionIniciada = false;
         public static bool sesionCerrada = false;
@@ -77,6 +78,7 @@ namespace InicioSesion
                             LogIn.actualUserId = null;
                             LogIn.actualUserPoints = 0;
                             LogIn.encriptedPassword = null;
+                            LogIn.actualNivelJ3 = 0;
                             return;
                         }
                         else

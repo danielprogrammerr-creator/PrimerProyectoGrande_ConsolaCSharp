@@ -7,6 +7,7 @@ namespace InicioSesion
 {
     class User
     {
+        public int nivelJ3 {  get; set; }
         public string userName { get; set; }
         public string userPassword { get; set; }
         public string userMail { get; set; }
@@ -26,6 +27,7 @@ namespace InicioSesion
             user.userPassword = password;
             user.userId = id;
             user.userPoints = 0;
+            user.nivelJ3 = 0;
             users.Add(user);
             LogIn.hayUsuariosCreados = true;
         }

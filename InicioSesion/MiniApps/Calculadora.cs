@@ -19,7 +19,7 @@ class Calculadora
             while (true)
             {
                 Console.Clear();
-                LetrasLento.Letras(20,"¿Que deseas hacer?\n1 - Calcular\n2 - Registro de Cálculos(10)\n3 - Volver");
+                Estetica.Parpadeo("¿Que deseas hacer?\n1 - Calcular\n2 - Registro de Cálculos(10)\n3 - Volver");
                 ConsoleKeyInfo queHacer = Console.ReadKey(true);
                 switch (queHacer.Key)
                 {

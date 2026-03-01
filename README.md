@@ -1,1 +1,1 @@
-Este proyecto empezó con la idea de crear un sistema de: Registro e Inicio de Sesión, acabando finalmente en algo un poco más grande. 
+Este proyecto empezó con la idea de crear un sistema de "Registro e Inicio de Sesión", acabando finalmente en algo un poco más grande. Lo empecé aprox el 23/02/26 y acabé el 01/03/26. Mi edad: 16 años. Objetivo del proyecto: poner a prueba mis 2 meses de aprendizaje en C# sin ayuda de la IA(solo algún mínimo fallo de sintaxis).
